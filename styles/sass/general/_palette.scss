@@ -1,0 +1,21 @@
+// app colors
+
+$headerTitleColor: #E8E8E8;
+// $buttonColor:
+// $backgroundOne:
+// $backgroundTwo:
+// $paragraphColor:
+
+// app fonts
+$headerTitleFont: 'Permanent Marker', cursive;
+$headingFont: 'Taviraj', serif;
+$paragraphFont: 'Josefin Sans', sans-serif;
+
+// mixin to set font, font size, line height, and letter spacing
+
+@mixin font($fontName, $size, $lh, $ls) {
+    font-family: $fontName;
+    font-size: $size;
+    line-height: $lh;
+    letting-spacing: $ls;
+}

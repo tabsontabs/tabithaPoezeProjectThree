@@ -1,0 +1,10 @@
+
+header {
+    background-image: url(../assets/wineCorks.jpg);
+    height: 100vh;
+}
+
+header h1 {
+    @include font($headerTitleFont, 10rem, 200px, 10px);
+    color: $headerTitleColor;
+}
