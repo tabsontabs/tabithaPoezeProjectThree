@@ -1,0 +1,15 @@
+button {
+    font-family: $paragraphFont;
+    text-transform: uppercase;
+    @include font(1.2rem, 25px, 2px);
+    color: $backgroundOne;
+    border: 3px solid $backgroundOne;
+    background-color: $buttonColor;
+    padding: 20px 40px;
+}
+
+button:hover {
+    color: $buttonColor;
+    border: 3px solid $buttonColor;
+    background-color: $backgroundOne;
+}

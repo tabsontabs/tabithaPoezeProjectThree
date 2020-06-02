@@ -1,10 +1,35 @@
 
 header {
     background-image: url(../assets/wineCorks.jpg);
-    height: 100vh;
+    height: 100%;
 }
 
 header h1 {
-    @include font($headerTitleFont, 10rem, 200px, 10px);
+    @include font(9rem, 200px, 2px);
+    font-family: $headerTitleFont;
     color: $headerTitleColor;
+    text-shadow: 10px 10px $backgroundOne;
+    text-align: center;
+    padding: 20px;
 }
+
+header p {
+    padding: 20px;
+    text-align: center;
+    color: $backgroundOne;
+}
+
+header button {
+    margin: 20px 20px 60px 20px;
+}
+
+.headerFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(162, 156, 155, 0.8);
+    height: 100%;
+    padding: 20px;
+}
+
