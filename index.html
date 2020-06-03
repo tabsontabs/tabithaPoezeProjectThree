@@ -21,23 +21,33 @@
     <section class="wineColor">
         <div class="wrapper">
             <form class="wineColorForm">
-                <input type="radio" id="red" name="color" value="red">
-                <label for="red"><img src="" alt="">Red</label> 
-                <input type="radio" id="white" name="color" value="white">
-                <label for="white"><img src="" alt="">White</label><br>
-                <input type="radio" id="rose" name="color" value="rose">
-                <label for="rose"><img src="" alt="">Rose</label>
+                <div class="overlay">
+                    <input type="radio" id="red" name="color" value="red">
+                    <label for="red"><img src="./assets/redWine.jpg" alt=""><span>Red</span></label> 
+                </div>
+                <div class="overlay">
+                    <input type="radio" id="white" name="color" value="white">
+                    <label for="white"><img src="./assets/whiteWine.jpg" alt=""><span>White</span></label>
+                </div>
+                <div class="overlay">
+                    <input type="radio" id="rose" name="color" value="rose">
+                    <label for="rose"><img src="./assets/roseWine.jpg" alt=""><span>Rose</span></label>
+                </div>
             </form>
         </div>
     </section>
 
     <section class="price">
-        <div class="wrapper">
+        <div class="Wrapper">
             <form class="priceForm">
-                <input type="radio" id="10" name="price" value="10">
-                <label for="10"><img src="" alt="">Less than $10</label>
-                <input type="radio" id="20" name="price" value="20">
-                <label for="20"><img src="" alt="">Less than $20</label><br>
+                <div class="overlay">
+                    <input type="radio" id="10" name="price" value="10">
+                    <label for="10"><span>Less than $10</span></label>
+                </div>
+                <div class="overlay">
+                    <input type="radio" id="20" name="price" value="20">
+                    <label for="20"><span>Less than $20</span></label>
+                </div>
             </form>
         </div>
     </section>
@@ -45,10 +55,14 @@
     <section class="sugar">
         <div class="wrapper">
             <form class="sugarForm">
-                <input type="radio" id="sweet" name="sugarLevel" value="sweet">
-                <label for="sweet"><img src="" alt="">Sweet</label>
-                <input type="radio" id="notSweet" name="sugarLevel" value="notSweet">
-                <label for="notSweet"><img src="" alt="">Not so sweet</label><br>
+                <div class="overlay">
+                    <input type="radio" id="sweet" name="sugarLevel" value="sweet">
+                    <label for="sweet"><img src="./assets/sweet.jpg" alt=""><span>Sweet</span></label>
+                </div>
+                <div class="overlay">
+                    <input type="radio" id="notSweet" name="sugarLevel" value="notSweet">
+                    <label for="notSweet"><img src="./assets/notSweet.jpg" alt=""><span>Not so sweet</span></label>
+                </div>
             </form>
         </div>
     </section>
@@ -58,13 +72,12 @@
             <h2 class="resultTitle"></h2>
             <p class="resultInfo"></p>
             <p class="resultPrice"></p>
-            <button></button>
         </div>
     </section>
 
     <footer>
         <div class="subWrapper">
-            <p>Made with love by Tabitha Poeze</p>
+            <p>Made with 💖 by Tabitha Poeze</p>
         </div>
     </footer>
 </body>

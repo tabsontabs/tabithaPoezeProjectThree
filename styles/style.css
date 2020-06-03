@@ -5,6 +5,14 @@ p {
   letter-spacing: 2px;
 }
 
+span {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4rem;
+  line-height: 4rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -233,6 +241,11 @@ h1, h2, h3, p, a, ul, li, button {
   padding: 0;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
 .wrapper {
   max-width: 1700px;
 }
@@ -259,6 +272,10 @@ button:hover {
   color: #9A313B;
   border: 3px solid #9A313B;
   background-color: #121217;
+}
+
+input[type=radio] {
+  display: none;
 }
 
 header {
@@ -304,4 +321,109 @@ header button {
   background-color: rgba(162, 156, 155, 0.8);
   height: 100%;
   padding: 20px;
+}
+
+.wineColorForm {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 100vh;
+      grid-template-rows: 100vh;
+  text-align: center;
+}
+
+.wineColorForm span {
+  position: relative;
+  bottom: 50%;
+  text-shadow: 3px 3px white;
+}
+
+.wineColorForm img:hover {
+  opacity: 0.3;
+}
+
+.wineColorForm .overlay:first-of-type {
+  background-color: #9A313B;
+}
+
+.wineColorForm .overlay:nth-of-type(2) {
+  background-color: #E8E8E8;
+}
+
+.wineColorForm .overlay:last-of-type {
+  background-color: #F6CACA;
+}
+
+.price {
+  background-image: url("../assets/moneys.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.priceForm {
+  height: 100vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.priceForm .overlay {
+  height: 100vh;
+  width: 50vw;
+}
+
+.priceForm .overlay:first-of-type:hover {
+  background-color: rgba(162, 156, 155, 0.7);
+}
+
+.priceForm .overlay:last-of-type:hover {
+  background-color: rgba(162, 156, 155, 0.8);
+}
+
+.priceForm span {
+  position: relative;
+  top: 40%;
+  text-shadow: 3px 3px white;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.sugarForm {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 100vh;
+      grid-template-rows: 100vh;
+  text-align: center;
+}
+
+.sugarForm span {
+  position: relative;
+  bottom: 60%;
+  text-shadow: 3px 3px white;
+}
+
+.sugarForm img:hover {
+  opacity: 0.2;
+}
+
+.sugarForm .overlay {
+  background-color: #A29C9B;
+}
+
+.results {
+  height: 100vh;
+  background-color: #F6CACA;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
 }

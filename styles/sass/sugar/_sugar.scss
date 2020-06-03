@@ -1,0 +1,23 @@
+
+.sugarForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100vh;
+    text-align: center;
+}
+
+.sugarForm span {
+    position: relative;
+    bottom: 60%;
+    text-shadow: 3px 3px white;
+}
+
+.sugarForm img {
+    &:hover {
+            opacity: 0.2;
+        }
+}
+
+.sugarForm .overlay {
+    background-color: $backgroundTwo;
+}
