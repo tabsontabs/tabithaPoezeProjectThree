@@ -1,0 +1,13 @@
+.submit {
+    background-image: url(../assets/submitImage.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.submitFlex {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
