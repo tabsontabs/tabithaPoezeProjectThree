@@ -13,7 +13,7 @@
             <div class="headerFlex">
                 <h1>Wine Time</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus eius modi quas voluptatibus officia ratione debitis ullam quam assumenda dolor. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos saepe totam autem sed labore facilis voluptatum fugit ratione ullam ab.</p>
-                <a href="#q1"><button>Let's get started</button></a>
+                <button>Let's get started</button>
             </div>
         </div>
     </header>
@@ -22,7 +22,7 @@
             <div class="wrapper">
                 <div class="wineColorForm">
                     <div class="overlay">
-                        <input type="radio" id="red" name="color" value="red">
+                        <input type="radio" id="red" name="color" value="red" checked>
                         <label for="red"><img src="./assets/redWine.jpg" alt=""><span>Red</span></label>
                     </div>
                     <div class="overlay">
@@ -40,7 +40,7 @@
             <div class="Wrapper">
                 <div class="priceForm">
                     <div for="10" class="overlay">
-                        <input type="radio" id="10" name="price" value="10">
+                        <input type="radio" id="10" name="price" value="10" checked>
                         <label for="10"><img src="./assets/coins.jpg" alt=""><span>Less than $10</span></label>
                     </div>
                     <div for="20" class="overlay">
@@ -50,11 +50,11 @@
                 </div>
             </div>
         </fieldset>
-        <fieldset class="sugar">
+        <fieldset id="q3" class="sugar">
             <div class="wrapper">
                 <div class="sugarForm">
                     <div class="overlay">
-                        <input type="radio" id="sweet" name="sugarLevel" value="true">
+                        <input type="radio" id="sweet" name="sugarLevel" value="true" checked>
                         <label for="sweet"><img src="./assets/sweet.jpg" alt=""><span>On the sweet side</span></label>
                     </div>
                     <div class="overlay">
@@ -64,7 +64,7 @@
                 </div>
             </div>
         </fieldset>
-        <section class="submit">
+        <section id="submit" class="submit">
             <div class="subwrapper">
                 <div class="submitFlex">
                     <input type="submit" value="Submit">
@@ -72,7 +72,7 @@
             </div>
         </section>
     </form>
-    <section class="results">
+    <section id="results" class="results">
         <div class="subWrapper">
             <div class="userWine">
             <img class="resultImg" src="" alt="">
@@ -81,6 +81,9 @@
                 <p class="resultInfo"></p>
                 <p class="resultPrice"></p>
             </div>
+            </div>
+            <div class="buttonFlex">
+                <button>Can I do that again?</button>
             </div>
         </div>
     </section>

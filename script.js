@@ -94,6 +94,41 @@ const wines = {
 //document ready
 $(function() {
 
+    $('header button').click(function () {
+        $('html, body').animate({
+            scrollTop: $('#q1').offset().top
+        });
+    })
+
+    $('input[name=color]').click(function(){
+        $('html, body').animate({
+            scrollTop: $('#q2').offset().top});
+    })
+
+    $('input[name=price]').click(function () {
+        $('html, body').animate({
+            scrollTop: $('#q3').offset().top
+        });
+    })
+
+    $('input[name=sugarLevel]').click(function () {
+        $('html, body').animate({
+            scrollTop: $('#submit').offset().top
+        });
+    })
+
+    $('input[type=submit]').click(function () {
+        $('html, body').animate({
+            scrollTop: $('#results').offset().top
+        });
+    })
+
+    $('.results button').click(function () {
+        $('html, body').animate({
+            scrollTop: $('#q1').offset().top
+        });
+    })
+
     $('form').on('submit', function(e){ 
         //prevent default form behaviour
         e.preventDefault();

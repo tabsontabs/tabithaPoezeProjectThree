@@ -8,13 +8,14 @@
 
 .wineColorForm span {
     position: relative;
-    bottom: 50%;
-    text-shadow: 3px 3px white;
+    bottom: 40%;
 }
 
 .wineColorForm img {
+    // opacity: 0.7;
+
     &:hover {
-            opacity: 0.3;
+            opacity: 0.2;
         }
 }
 
