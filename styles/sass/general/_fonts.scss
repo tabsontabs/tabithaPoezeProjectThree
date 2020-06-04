@@ -9,3 +9,9 @@ span {
     text-transform: uppercase;
     font-weight: bold;
 }
+
+h2 {
+    font-family: $headingFont;
+    @include font(3rem, 3rem, 2px);
+}
+

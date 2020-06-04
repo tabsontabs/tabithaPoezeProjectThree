@@ -1,4 +1,27 @@
 .results {
-    height: 100vh;
     background-color: $backgroundThree;
 }
+
+.userWine {
+    display: flex;
+    padding: 10vh 0vh 10vh 0vh;
+}
+
+.userWineText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 65%;
+    padding-left: 5%;
+}
+
+.resultImg {
+    height: 80vh;
+    width: 30%;
+}
+
+.resultPrice {
+    font-weight: bold;
+    font-size: 2rem;
+}
+

@@ -14,6 +14,13 @@ span {
   font-weight: bold;
 }
 
+h2 {
+  font-family: "Taviraj", serif;
+  font-size: 3rem;
+  line-height: 3rem;
+  letter-spacing: 2px;
+}
+
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -428,8 +435,39 @@ header button {
 }
 
 .results {
-  height: 100vh;
   background-color: #F6CACA;
+}
+
+.userWine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10vh 0vh 10vh 0vh;
+}
+
+.userWineText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 65%;
+  padding-left: 5%;
+}
+
+.resultImg {
+  height: 80vh;
+  width: 30%;
+}
+
+.resultPrice {
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 footer {
