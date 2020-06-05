@@ -1,31 +1,24 @@
-.price {
-    // background-image: url('../assets/moneys.jpg');
-    // background-position: center;
-    // background-size: cover;
-    height: 100vh;
-}
 
 .priceForm {
     height: 100vh;
     text-align: center;
     display: flex;
     justify-content: space-between;
-}
 
-.priceForm img {
-    // opacity: 0.8;
-
-    &:hover {
-            opacity: 0.2;
+        span {
+            bottom: 50%;
         }
 }
 
-.priceForm .overlay {
-    background-color: $backgroundTwo;
+
+@media (max-width: 1050px) {
+    .priceForm {
+        height: 70vh;
+}
 }
 
-.priceForm span {
-    position: relative;
-    bottom: 50%;
+@media (max-width: 600px) {
+    .priceForm {
+        height: 50vh;
 }
-
+}

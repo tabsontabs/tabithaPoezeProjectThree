@@ -1,22 +1,28 @@
-
 .sugarForm {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100vh;
     text-align: center;
-}
 
-.sugarForm span {
-    position: relative;
-    bottom: 50%;
-}
+        span {
+            bottom: 50%;
+        }
 
-.sugarForm img {
-    &:hover {
-            opacity: 0.3;
+        img {
+            &:hover{
+                opacity: 0.3;
+            }
         }
 }
 
-.sugarForm .overlay {
-    background-color: $backgroundTwo;
+@media (max-width: 1050px) {
+    .sugarForm {
+        grid-template-rows: 70vh;
+}
+}
+
+@media (max-width: 600px) {
+    .sugarForm {
+        grid-template-rows: 50vh;
+}
 }

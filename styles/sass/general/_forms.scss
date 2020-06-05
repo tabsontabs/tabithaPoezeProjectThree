@@ -2,7 +2,24 @@ input[type=radio] {
     display: none;
 }
 
+input[type=radio]:checked + label span {
+    color: white;
+}
+
 input[type=radio]:checked + label img {
     opacity: 0.3;
 }
 
+form img {
+
+    &:hover {
+            opacity: 0.3;
+        }
+    &:hover + span {
+            color: white;
+    }
+}
+
+form span {
+    position: relative;
+}

@@ -1,3 +1,13 @@
+
+h1 {
+    @include font(9rem, 9rem, 2px);
+    font-family: $headerTitleFont;
+    color: $headerTitleColor;
+    text-shadow: 10px 10px $backgroundOne;
+    text-align: center;
+    padding: 20px;
+}
+
 p {
     font-family: $paragraphFont;
     @include font(1.5rem, 25px, 2px);
@@ -5,25 +15,68 @@ p {
 
 span {
     font-family: $paragraphFont;
-    color: white;
-    // color: $backgroundOne;
+    color: black;
     @include font(4rem, 4rem, 2px);
     text-transform: uppercase;
-    // font-weight: bold;
-    // text-shadow: 4px 4px black;
     background-color: $backgroundTwo;
     padding: 15px 10px 0px 10px;
-    // border: 2px solid black;
     display: block;
     width: 70%;
 
         &:hover {
-            color: black;
+            color: white;
         }
 }
 
 h2 {
     font-family: $headingFont;
     @include font(3rem, 3rem, 2px);
+}
+
+@media (max-width: 1050px) {
+    span {
+        @include font(2rem, 2rem, 2px);
+    }
+
+    h2 {
+        @include font(2rem, 2rem, 2px);
+    }
+
+    p {
+        @include font(1rem, 22px, 2px);
+    }
+}
+
+@media (max-width: 750px) {
+    span {
+        padding: 10px 10px 0px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    span {
+        width: 80%;
+    }
+    h1 {
+    @include font(7rem, 7rem, 2px);
+    }
+}
+
+@media (max-width: 500px) {
+    span {
+        width: 94%;
+        margin-left: 3%;
+        @include font(1.5rem, 1.5rem, 2px);
+    }
+
+    h2 {
+        @include font(1.5rem, 1.5rem, 2px);
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        @include font(5rem, 5rem, 2px);
+    }
 }
 

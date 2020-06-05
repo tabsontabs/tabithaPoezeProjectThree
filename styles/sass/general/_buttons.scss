@@ -22,3 +22,9 @@ button:hover, input[type=submit]:hover {
     background-color: $backgroundOne;
 }
 
+@media (max-width: 450px) {
+    button {
+        padding: 10px 20px;
+    }
+}
+

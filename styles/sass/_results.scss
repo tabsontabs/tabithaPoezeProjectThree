@@ -15,24 +15,93 @@
 .userWine {
     display: flex;
     padding: 5vh 0vh 3vh 0vh;
+
+    .resultImg {
+        height: 75vh;
+        width: 30%;
+    }
+
+    .userWineText {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 65%;
+        padding-left: 5%;
+    }      
+        .resultPrice {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
 }
 
-.userWineText {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 65%;
-    padding-left: 5%;
+@media (max-width: 1050px) {
+
+    .userWine {
+
+        .resultImg {
+            width: 40%;
+        }
+
+        .userWineText {
+            width: 60%;
+        }
+    }
 }
 
-.resultImg {
-    height: 75vh;
-    width: 30%;
+@media (max-width: 750px) {
+
+    .userWine {
+        flex-direction: column;
+        align-items: center;
+        padding: 5vh 0vh 3vh 0vh;
+
+            .resultImg {
+                height: 75vh;
+                width: 70%;
+            }
+
+            .userWineText {
+                width: 100%;
+                padding: 2% 0 2% 0;
+                min-height: 50vh; 
+
+                .resultTitle {
+                    padding-bottom: 2%;
+                }
+
+                .resultPrice {
+                    padding-top: 2%;
+                }
+            }
+    }
 }
 
-.resultPrice {
-    font-weight: bold;
-    font-size: 2rem;
+@media (max-width: 600px) {
+
+    .userWine {
+        .userWineText {
+            width: 100%;
+            padding: 5% 0 5% 0;
+            min-height: 50vh; 
+
+            .resultTitle {
+                padding-bottom: 5%;
+            }
+
+            .resultPrice {
+                padding-top: 5%;
+            }
+        }
+    }
 }
 
+@media (max-width: 450px) {
+    .userWine {
 
+        .resultImg {
+            height: 60vh;
+        }
+        
+    }
+}

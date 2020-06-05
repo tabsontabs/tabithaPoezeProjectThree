@@ -127,6 +127,7 @@ $(function() {
         $('html, body').animate({
             scrollTop: $('#q1').offset().top
         });
+        // $('.results').detach();
     })
 
     $('form').on('submit', function(e){ 
