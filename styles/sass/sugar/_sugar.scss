@@ -26,3 +26,9 @@
         grid-template-rows: 50vh;
 }
 }
+
+@media (max-width: 450px) {
+    .sugarForm {
+        grid-template-rows: 40vh;
+}
+}

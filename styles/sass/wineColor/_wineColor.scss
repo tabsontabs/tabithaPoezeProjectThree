@@ -22,3 +22,8 @@
 }
 }
 
+@media (max-width: 450px) {
+    .wineColorForm {
+        grid-template-rows: 40vh;
+}
+}

@@ -472,6 +472,13 @@ button {
   }
 }
 
+@media (max-width: 450px) {
+  .wineColorForm {
+    -ms-grid-rows: 40vh;
+        grid-template-rows: 40vh;
+  }
+}
+
 .priceForm {
   height: 100vh;
   text-align: center;
@@ -496,6 +503,12 @@ button {
 @media (max-width: 600px) {
   .priceForm {
     height: 50vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .priceForm {
+    height: 40vh;
   }
 }
 
@@ -528,6 +541,13 @@ button {
   .sugarForm {
     -ms-grid-rows: 50vh;
         grid-template-rows: 50vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .sugarForm {
+    -ms-grid-rows: 40vh;
+        grid-template-rows: 40vh;
   }
 }
 
@@ -634,7 +654,8 @@ button {
 
 @media (max-width: 450px) {
   .userWine .resultImg {
-    height: 60vh;
+    height: 55vh;
+    width: 95%;
   }
 }
 
