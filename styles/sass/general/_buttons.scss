@@ -1,4 +1,4 @@
-button, input[type=submit] {
+button, input[type=submit], .swal-button, .swal-button:focus {
     font-family: $paragraphFont;
     text-transform: uppercase;
     color: $backgroundOne;
@@ -16,7 +16,14 @@ input[type=submit] {
     @include font(2rem, 5px, 5px);
 }
 
-button:hover, input[type=submit]:hover {
+button:hover, input[type=submit]:hover, .swal-button:not([disabled]):hover {
+    color: $buttonColor;
+    border: 3px solid $buttonColor;
+    background-color: $backgroundOne;
+}
+
+button:focus, input[type=submit]:focus {
+    outline: 0;
     color: $buttonColor;
     border: 3px solid $buttonColor;
     background-color: $backgroundOne;

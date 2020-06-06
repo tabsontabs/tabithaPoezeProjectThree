@@ -25,7 +25,7 @@ span {
   text-transform: uppercase;
   background-color: #A29C9B;
   padding: 15px 10px 0px 10px;
-  display: block;
+  display: inline-block;
   width: 70%;
 }
 
@@ -38,6 +38,22 @@ h2 {
   font-size: 3rem;
   line-height: 3rem;
   letter-spacing: 2px;
+}
+
+.swal-title {
+  color: #121217;
+  font-size: 1.5rem;
+  line-height: 20px;
+  letter-spacing: 2px;
+  font-family: "Taviraj", serif;
+}
+
+.swal-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: #121217;
 }
 
 @media (max-width: 1050px) {
@@ -344,7 +360,7 @@ img {
   width: 80%;
 }
 
-button, input[type=submit] {
+button, input[type=submit], .swal-button, .swal-button:focus {
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   color: #121217;
@@ -366,7 +382,14 @@ input[type=submit] {
   letter-spacing: 5px;
 }
 
-button:hover, input[type=submit]:hover {
+button:hover, input[type=submit]:hover, .swal-button:not([disabled]):hover {
+  color: #9A313B;
+  border: 3px solid #9A313B;
+  background-color: #121217;
+}
+
+button:focus, input[type=submit]:focus {
+  outline: 0;
   color: #9A313B;
   border: 3px solid #9A313B;
   background-color: #121217;
@@ -455,7 +478,7 @@ button {
 }
 
 .wineColorForm span {
-  bottom: 40%;
+  bottom: 50%;
 }
 
 @media (max-width: 1050px) {

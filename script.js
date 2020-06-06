@@ -148,10 +148,22 @@ wineRecoApp.getWineReco = function() {
     e.preventDefault();
 
     //get the values of selected radio buttons
-    const colorPref = $('input[name=color]:checked').val();
-    const pricePref = $('input[name=price]:checked').val();
-    const sugarPref = $('input[name=sugarLevel]:checked').val();
+    let colorPref = $('input[name=color]:checked').val();
+    let pricePref = $('input[name=price]:checked').val();
+    let sugarPref = $('input[name=sugarLevel]:checked').val();
 
+    console.log(colorPref);
+
+    if (colorPref == undefined || pricePref == null || sugarPref == undefined) {
+        swal({
+            title: "Hmm that's not working...",
+            text: "Please make sure you've selected a color preference, price preference, and sweetness preference!",
+            // icon: 'info',
+            button: "Ok, will do",
+            closeOnClickOutside: false,
+        });
+    }
+    
     //get an array of wines that match the selected radio buttons
     const wineReco = wines.filter((value) => {
         return value.price < pricePref 

@@ -20,7 +20,7 @@ span {
     text-transform: uppercase;
     background-color: $backgroundTwo;
     padding: 15px 10px 0px 10px;
-    display: block;
+    display: inline-block;
     width: 70%;
 
         &:hover {
@@ -31,6 +31,18 @@ span {
 h2 {
     font-family: $headingFont;
     @include font(3rem, 3rem, 2px);
+}
+
+.swal-title {
+    color: $backgroundOne;
+    @include font(1.5rem, 20px, 2px);
+    font-family: $headingFont;
+}
+
+.swal-text {
+    font-family: $paragraphFont;
+    @include font(1rem, 20px, 2px);
+    color: $backgroundOne;
 }
 
 @media (max-width: 1050px) {
