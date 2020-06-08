@@ -21,7 +21,7 @@ const wines = [
             price: 12.95,
             sweet: 'false',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/010416.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
-            description: "Hailing from South Africa's Stellenbosch area, renowned for world - class cabernet sauvignon, this lush red possesses aromas of dark plum, violet and sweet pipe tobacco and flavours of ripe blueberry, blackcurrant and bramble.Nuances of spice and cocoa linger on the smooth finish.Pair with ribeye steak or grilled mushrooms."
+            description: "Really great wine at a really great price point. "
         },
         {
             title: 'Negrar Appassimento Veneto IGT',
@@ -107,31 +107,50 @@ wineRecoApp.autoScrolling = function() {
         });
     })
 
-    $('input[name=color]').click(function () {
-        if ($(this).is(':checked')) {
+    $('input[name=color]').keypress(function (event) {
+        if (event.which == 32) {
             $('html, body').animate({
                 scrollTop: $('#q2').offset().top
             });
         }
     })
 
-    $('input[name=price]').click(function () {
-        if ($('input[name=price]').is(':checked')) {
+    $('.wineColorForm').mousedown(function () {
+            $('html, body').animate({
+                scrollTop: $('#q2').offset().top
+            });
+    })
+    //add in event listener if input is on focus then callback function find the value of the key that was pressed, get associated key code save value of input in focus
+
+    $('input[name=price]').keypress(function () {
+        if (event.which == 32) {
             $('html, body').animate({
                 scrollTop: $('#q3').offset().top
             });
         }
     })
 
-    $('input[name=sugarLevel]').click(function () {
-        if ($('input[name=sugarLevel]').is(':checked')) {
+    $('.priceForm').mousedown(function () {
+        $('html, body').animate({
+            scrollTop: $('#q3').offset().top
+        });
+    })
+
+    $('input[name=sugarLevel]').keypress(function () {
+        if (event.which == 32) {
             $('html, body').animate({
                 scrollTop: $('#submit').offset().top
             });
         }      
     })
 
-    $('input[type=submit]').click(function () {
+    $('.sugarForm').mousedown(function () {
+        $('html, body').animate({
+            scrollTop: $('#submit').offset().top
+        });
+    })
+
+    $('form').submit(function () {
         $('html, body').animate({
             scrollTop: $('#results').offset().top
         });
@@ -147,9 +166,15 @@ wineRecoApp.autoScrolling = function() {
 //filter through the list of wines based on the options the user checked and present a recomnendation
 wineRecoApp.getWineReco = function() {
 
+    // $('form').keydown(function (event) {
+    //     if (event.keyCode == 13) {
+    //         event.preventDefault();
+    //         return false;
+    //     }
+    // })
+
     //when form is submitted...
     $('form').on('submit', function (e) {
-
     //prevent default form behaviour
     e.preventDefault();
 
