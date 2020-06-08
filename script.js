@@ -5,7 +5,7 @@ const wines = [
             price: 8.15,
             sweet: 'false',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/635755.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
-            description: 'Hailing from Spain, this blend of merlot and tempranillo is an exceptional value. Ruby red in colour, look for alluring aromas and flavours of plum, cherry, chocolate, earth and a hint of black pepper. Medium bodied and smooth, with a long finish, this is ideal for beef tacos or grilled pork chops beside roasted potatoes.'
+            description: "At one point this wine sold out of the LCBO because it's that good. This wine is SO well balanced (tannin, acidity, fruitiness, the whole shebang). It's an $8 wine that tastes like a $50 wine."
         },
         {
             title: "Boone's Sangria",
@@ -13,7 +13,7 @@ const wines = [
             price: 7.95,
             sweet: 'true',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/419317.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
-            description: 'Medium purple colour; Orange, lime aromas and flavours; Sweet, citrus, grapey/blueberry flavours (Red wine with citrus fruit flavours); Lightly carbonated, rounded palate, sweet finish.'
+            description: "So this isn't exactly wine but if you're looking for a sweet, red wine under $10 you're probably actually looking for sangira, so here you go. This is 100% the best pre-bottled sangria you can buy. Throw some frozen fruit in if you're feeling fancy."
         },
         {
             title: 'Vinologist Cabernet Sauvignon',
@@ -37,7 +37,7 @@ const wines = [
             price: 9.95,
             sweet: 'true',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/141432.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
-            description: 'Pale yellow straw colour; light fruit aromas with citrus and mineral notes; dry, light bodied, with delicate fresh fruit flavours; tart and refreshing with a spritzy finish.'
+            description: 'This wine is crisp, lightly citrus, dry without being too dry, and has just a lil bit of fizz. So good! Fun fact: the fizz is not necessarily natural, but Vinho Verde but has come to be known for its fizz so nowadays most wine makers will add it through a boost of CO2.'
         },
         {
             title: 'Sandbanks Riesling',
@@ -45,7 +45,7 @@ const wines = [
             price: 14.95,
             sweet: 'true',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/139022.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
-            description: 'Clear pale straw colour; classic, soft floral, pear and petrol notes; off-dry, light body; peach and apricot flavours with citrus, clean finish.'
+            description: "The actual sugar content of this wine is pretty high at 24 g/L but it's not overpowering at all. Not sure how this wine manages to be so well balanced, but it does. No bready flavours and plenty of peach, pear, and apricot goodness. Smooth and aromatic finish."
         },
         {
             title: 'Villa Maria Private Bin Sauvignon Blanc',
@@ -69,7 +69,7 @@ const wines = [
             price: 9.95,
             sweet: 'false',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/632513.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
-            description: "Made from grapes grown near Portugal's capital of Lisbon.The nearby Atlantic Ocean moderates temperatures, yielding wines with freshness and lively flavours.A blend of cabernet sauvignon and local red varieties, this rosé is brimming with aromas and flavours of ripe red fruit.Pair with seafood, shellfish or rice dishes."
+            description: "Crisp and refreshing with just a hint of strawberry flavours. Would be great with oysters. Perfect for those who don't want to feel like their drinking watermelon juice when they drink rosé."
         },
         {
             title: 'Barefoot Cellars Pink Pinot Grigio',
@@ -94,7 +94,7 @@ const wines = [
             sweet: 'false',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/622134.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
             description: "Grapes grown on the slopes of France's Mont Ventoux ripen slowly at cooler temperatures, maintaining fruit flavours and crisp acidity. This wine is pale rose in colour, with delicate aromas of raspberry and strawberry. Dry and light-bodied, with citrus and raspberry fruit flavours. Serve chilled with tarragon chicken."
-        }
+        }   
 ];
 
 const wineRecoApp = {};
@@ -108,21 +108,27 @@ wineRecoApp.autoScrolling = function() {
     })
 
     $('input[name=color]').click(function () {
-        $('html, body').animate({
-            scrollTop: $('#q2').offset().top
-        });
+        if ($(this).is(':checked')) {
+            $('html, body').animate({
+                scrollTop: $('#q2').offset().top
+            });
+        }
     })
 
     $('input[name=price]').click(function () {
-        $('html, body').animate({
-            scrollTop: $('#q3').offset().top
-        });
+        if ($('input[name=price]').is(':checked')) {
+            $('html, body').animate({
+                scrollTop: $('#q3').offset().top
+            });
+        }
     })
 
     $('input[name=sugarLevel]').click(function () {
-        $('html, body').animate({
-            scrollTop: $('#submit').offset().top
-        });
+        if ($('input[name=sugarLevel]').is(':checked')) {
+            $('html, body').animate({
+                scrollTop: $('#submit').offset().top
+            });
+        }      
     })
 
     $('input[type=submit]').click(function () {
@@ -131,14 +137,14 @@ wineRecoApp.autoScrolling = function() {
         });
     })
 
-    $('.results button').click(function () {
+    $('.tryAgain button').click(function () {
         $('html, body').animate({
             scrollTop: $('#q1').offset().top
         });
     })
 }
 
-//filter through the list of wines based on the options the user checked
+//filter through the list of wines based on the options the user checked and present a recomnendation
 wineRecoApp.getWineReco = function() {
 
     //when form is submitted...
@@ -148,12 +154,22 @@ wineRecoApp.getWineReco = function() {
     e.preventDefault();
 
     //get the values of selected radio buttons
-    const colorPref = $('input[name=color]:checked').val();
-    const pricePref = $('input[name=price]:checked').val();
-    const sugarPref = $('input[name=sugarLevel]:checked').val();
+    let colorPref = $('input[name=color]:checked').val();
+    let pricePref = $('input[name=price]:checked').val();
+    let sugarPref = $('input[name=sugarLevel]:checked').val();
 
+    //alert in case the user did not select a value for one of the sections
+    if (colorPref == undefined || pricePref == null || sugarPref == undefined) {
+        swal({
+            title: "Hmm that's not working...",
+            text: "Please make sure you've selected a color preference, price preference, and sweetness preference!",
+            button: "Ok, will do",
+            closeOnClickOutside: false,
+        });
+    }
+    
     //get an array of wines that match the selected radio buttons
-    const wineReco = wines.filter((value) => {
+    const wineRecoList = wines.filter((value) => {
         return value.price < pricePref 
         && value.price > (pricePref - 10)
         && value.sweet == sugarPref 
@@ -161,21 +177,22 @@ wineRecoApp.getWineReco = function() {
     });
 
     //loop through the array of wines and display a recommendation to the user
-    wineReco.forEach(function (wine) {
-        const userWineImg = $('.resultImg').attr('src', `${wine.url}`);
-        const userWineTitle = $('.resultTitle').text(`${wine.title}`);
-        const userWineInfo = $('.resultInfo').text(`${wine.description}`);
-        const userWinePrice = $('.resultPrice').text(`$${wine.price}`);
+    wineRecoList.forEach(function (wine) {
+        const userWineImg = $('<img>').addClass('resultImg').attr('src', `${wine.url}`);
+        const userWineTitle = $('<h2>').addClass('resultTitle').text(`${wine.title}`);
+        const userWineInfo = $('<p>').addClass('resultInfo').text(`${wine.description}`);
+        const userWinePrice = $('<p>').addClass('resultPrice').text(`$${wine.price}`);
+        const userWineText = $('<div>').addClass('userWineText').append(userWineTitle, userWineInfo, userWinePrice);
+        const userWine = $('<div>').addClass('userWine').append(userWineImg, userWineText);
+        const showResult = $('.results .subWrapper').html(userWine);
     });
 });
 }
 
 wineRecoApp.init = function() {
     wineRecoApp.autoScrolling();
-    // wineRecoApp.filterWines();
     wineRecoApp.getWineReco();
 }
-
 
 //document ready
 $(function() {

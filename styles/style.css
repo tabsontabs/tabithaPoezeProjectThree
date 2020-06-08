@@ -12,8 +12,9 @@ h1 {
 p {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
-  line-height: 25px;
-  letter-spacing: 2px;
+  line-height: 30px;
+  letter-spacing: 3px;
+  font-weight: 500;
 }
 
 span {
@@ -25,7 +26,7 @@ span {
   text-transform: uppercase;
   background-color: #A29C9B;
   padding: 15px 10px 0px 10px;
-  display: block;
+  display: inline-block;
   width: 70%;
 }
 
@@ -38,6 +39,22 @@ h2 {
   font-size: 3rem;
   line-height: 3rem;
   letter-spacing: 2px;
+}
+
+.swal-title {
+  color: #121217;
+  font-size: 1.5rem;
+  line-height: 20px;
+  letter-spacing: 2px;
+  font-family: "Taviraj", serif;
+}
+
+.swal-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: #121217;
 }
 
 @media (max-width: 1050px) {
@@ -334,6 +351,20 @@ img {
   height: 100%;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .wrapper {
   max-width: 1700px;
 }
@@ -344,7 +375,7 @@ img {
   width: 80%;
 }
 
-button, input[type=submit] {
+button, input[type=submit], .swal-button, .swal-button:focus {
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   color: #121217;
@@ -366,10 +397,36 @@ input[type=submit] {
   letter-spacing: 5px;
 }
 
-button:hover, input[type=submit]:hover {
+button:hover, input[type=submit]:hover, .swal-button:not([disabled]):hover {
   color: #9A313B;
   border: 3px solid #9A313B;
   background-color: #121217;
+}
+
+button:focus, input[type=submit]:focus {
+  outline: 0;
+  color: #9A313B;
+  border: 3px solid #9A313B;
+  background-color: #121217;
+}
+
+.tryAgain {
+  background-color: #F6CACA;
+  padding-top: 5vh;
+}
+
+.tryAgain .buttonFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tryAgain .buttonFlex button {
+  margin-bottom: 5vh;
 }
 
 @media (max-width: 450px) {
@@ -378,15 +435,11 @@ button:hover, input[type=submit]:hover {
   }
 }
 
-input[type=radio] {
-  display: none;
-}
-
-input[type=radio]:checked + label span {
+input[type=radio]:checked + label span, input[type=radio]:focus + label span, input[type=radio]:active + label span {
   color: white;
 }
 
-input[type=radio]:checked + label img {
+input[type=radio]:checked + label img, input[type=radio]:focus + label img, input[type=radio]:active + label img {
   opacity: 0.3;
 }
 
@@ -455,7 +508,7 @@ button {
 }
 
 .wineColorForm span {
-  bottom: 40%;
+  bottom: 50%;
 }
 
 @media (max-width: 1050px) {
@@ -555,25 +608,11 @@ button {
   background-color: #F6CACA;
 }
 
-.results .buttonFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.results button {
-  margin-bottom: 5vh;
-}
-
 .userWine {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 5vh 0vh 3vh 0vh;
+  padding: 5vh 0vh 0vh 0vh;
 }
 
 .userWine .resultImg {

@@ -12,7 +12,7 @@
         <div class="subWrapper">
             <div class="headerFlex">
                 <h1>Wine Time</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus eius modi quas voluptatibus officia ratione debitis ullam quam assumenda dolor. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos saepe totam autem sed labore facilis voluptatum fugit ratione ullam ab.</p>
+                <p>Select your preferred wine color, price point, and sweetness. Then click the "Submit" button to receive a recommendation based on your choices. All wines are available at the LCBO. Cheers! 🍷</p>
                 <button>Let's get started</button>
             </div>
         </div>
@@ -22,15 +22,15 @@
             <div class="wrapper">
                 <div class="wineColorForm">
                     <div class="overlay">
-                        <input type="radio" id="red" name="color" value="red">
+                        <input class="sr-only" type="radio" id="red" name="color" value="red">
                         <label for="red"><img src="./assets/redWine.jpg" alt=""><span>Red</span></label>
                     </div>
                     <div class="overlay">
-                        <input type="radio" id="white" name="color" value="white">
+                        <input class="sr-only" type="radio" id="white" name="color" value="white">
                         <label for="white"><img src="./assets/whiteWine.jpg" alt=""><span>White</span></label>
                     </div>
                     <div class="overlay">
-                        <input type="radio" id="rose" name="color" value="rose">
+                        <input class="sr-only" type="radio" id="rose" name="color" value="rose">
                         <label for="rose"><img src="./assets/roseWine.jpg" alt=""><span>Rosé</span></label>
                     </div>
                 </div>
@@ -40,11 +40,11 @@
             <div class="Wrapper">
                 <div class="priceForm">
                     <div for="10" class="overlay">
-                        <input type="radio" id="10" name="price" value="10">
+                        <input class="sr-only" type="radio" id="10" name="price" value="10">
                         <label for="10"><img src="./assets/coins.jpg" alt=""><span>Less than $10</span></label>
                     </div>
                     <div for="20" class="overlay">
-                        <input type="radio" id="20" name="price" value="20">
+                        <input class="sr-only" type="radio" id="20" name="price" value="20">
                         <label for="20"><img src="./assets/payment.jpg" alt=""><span>Less than $20</span></label>
                     </div>
                 </div>
@@ -54,11 +54,11 @@
             <div class="wrapper">
                 <div class="sugarForm">
                     <div class="overlay">
-                        <input type="radio" id="sweet" name="sugarLevel" value="true">
+                        <input class="sr-only" type="radio" id="sweet" name="sugarLevel" value="true">
                         <label for="sweet"><img src="./assets/sweet.jpg" alt=""><span>On the sweet side</span></label>
                     </div>
                     <div class="overlay">
-                        <input type="radio" id="notSweet" name="sugarLevel" value="false">
+                        <input class="sr-only" type="radio" id="notSweet" name="sugarLevel" value="false">
                         <label for="notSweet"><img src="./assets/notSweet.jpg" alt=""><span>Not so sweet</span></label>
                     </div>
                 </div>
@@ -74,18 +74,11 @@
     </form>
     <section id="results" class="results">
         <div class="subWrapper">
-            <div class="wineRecoAppend">
-                <div class="userWine">
-                <img class="resultImg" src="" alt="">
-                <div class="userWineText">
-                    <h2 class="resultTitle"></h2>
-                    <p class="resultInfo"></p>
-                    <p class="resultPrice"></p>
-                </div>
-            </div>
-            <div class="buttonFlex">
-                <button>Can I do that again?</button>
-            </div>
+        </div>
+    </section>
+    <section id="tryAgain" class="tryAgain">
+        <div class="buttonFlex">
+            <button>Can I do that again?</button>
         </div>
     </section>
 
@@ -94,7 +87,7 @@
             <p>Made with 💖 by Tabitha Poeze</p>
         </div>
     </footer>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src='script.js'></script>
 </body>
