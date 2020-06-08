@@ -94,7 +94,7 @@ const wines = [
             sweet: 'false',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/622134.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
             description: "Grapes grown on the slopes of France's Mont Ventoux ripen slowly at cooler temperatures, maintaining fruit flavours and crisp acidity. This wine is pale rose in colour, with delicate aromas of raspberry and strawberry. Dry and light-bodied, with citrus and raspberry fruit flavours. Serve chilled with tarragon chicken."
-        }
+        }   
 ];
 
 const wineRecoApp = {};
@@ -108,21 +108,27 @@ wineRecoApp.autoScrolling = function() {
     })
 
     $('input[name=color]').click(function () {
-        $('html, body').animate({
-            scrollTop: $('#q2').offset().top
-        });
+        if ($(this).is(':checked')) {
+            $('html, body').animate({
+                scrollTop: $('#q2').offset().top
+            });
+        }
     })
 
     $('input[name=price]').click(function () {
-        $('html, body').animate({
-            scrollTop: $('#q3').offset().top
-        });
+        if ($('input[name=price]').is(':checked')) {
+            $('html, body').animate({
+                scrollTop: $('#q3').offset().top
+            });
+        }
     })
 
     $('input[name=sugarLevel]').click(function () {
-        $('html, body').animate({
-            scrollTop: $('#submit').offset().top
-        });
+        if ($('input[name=sugarLevel]').is(':checked')) {
+            $('html, body').animate({
+                scrollTop: $('#submit').offset().top
+            });
+        }      
     })
 
     $('input[type=submit]').click(function () {
@@ -163,7 +169,7 @@ wineRecoApp.getWineReco = function() {
     }
     
     //get an array of wines that match the selected radio buttons
-    const wineReco = wines.filter((value) => {
+    const wineRecoList = wines.filter((value) => {
         return value.price < pricePref 
         && value.price > (pricePref - 10)
         && value.sweet == sugarPref 
@@ -171,7 +177,7 @@ wineRecoApp.getWineReco = function() {
     });
 
     //loop through the array of wines and display a recommendation to the user
-    wineReco.forEach(function (wine) {
+    wineRecoList.forEach(function (wine) {
         const userWineImg = $('<img>').addClass('resultImg').attr('src', `${wine.url}`);
         const userWineTitle = $('<h2>').addClass('resultTitle').text(`${wine.title}`);
         const userWineInfo = $('<p>').addClass('resultInfo').text(`${wine.description}`);
