@@ -157,7 +157,6 @@ wineRecoApp.getWineReco = function() {
         swal({
             title: "Hmm that's not working...",
             text: "Please make sure you've selected a color preference, price preference, and sweetness preference!",
-            // icon: 'info',
             button: "Ok, will do",
             closeOnClickOutside: false,
         });

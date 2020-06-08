@@ -351,6 +351,20 @@ img {
   height: 100%;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .wrapper {
   max-width: 1700px;
 }
@@ -421,15 +435,11 @@ button:focus, input[type=submit]:focus {
   }
 }
 
-input[type=radio] {
-  display: none;
-}
-
-input[type=radio]:checked + label span {
+input[type=radio]:checked + label span, input[type=radio]:focus + label span, input[type=radio]:active + label span {
   color: white;
 }
 
-input[type=radio]:checked + label img {
+input[type=radio]:checked + label img, input[type=radio]:focus + label img, input[type=radio]:active + label img {
   opacity: 0.3;
 }
 
