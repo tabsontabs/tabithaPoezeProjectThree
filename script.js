@@ -1,3 +1,5 @@
+
+// an array of different wines and their names, grape color, price (at the LCBO), sweetness, an image, and description
 const wines = [
         {
             title: 'Toro Bravo Tempranillo Merlot',
@@ -101,12 +103,15 @@ const wineRecoApp = {};
 
 //move the user through the form and to their results as they check options
 wineRecoApp.autoScrolling = function() {
+
+    // move the user from the landing page to the first question
     $('header button').click(function () {
         $('html, body').animate({
             scrollTop: $('#q1').offset().top
         });
     })
 
+    // allows the user to select an option without clicking and still experience the auto scroll, particularly for users who do not use a mouse
     $('input[name=color]').keypress(function (event) {
         if (event.which == 32) {
             $('html, body').animate({
@@ -115,12 +120,13 @@ wineRecoApp.autoScrolling = function() {
         }
     })
 
+    // triggers auto scroll when user clicks a selection    
     $('.wineColorForm').mousedown(function () {
             $('html, body').animate({
                 scrollTop: $('#q2').offset().top
             });
     })
-    //add in event listener if input is on focus then callback function find the value of the key that was pressed, get associated key code save value of input in focus
+    
 
     $('input[name=price]').keypress(function () {
         if (event.which == 32) {
@@ -150,12 +156,14 @@ wineRecoApp.autoScrolling = function() {
         });
     })
 
+    // moves the user to the section where they will see their result
     $('form').submit(function () {
         $('html, body').animate({
             scrollTop: $('#results').offset().top
         });
     })
 
+    // moves the user back to question #1 so they can go through the questions again and change options as they wish
     $('.tryAgain button').click(function () {
         $('html, body').animate({
             scrollTop: $('#q1').offset().top
@@ -166,19 +174,12 @@ wineRecoApp.autoScrolling = function() {
 //filter through the list of wines based on the options the user checked and present a recomnendation
 wineRecoApp.getWineReco = function() {
 
-    // $('form').keydown(function (event) {
-    //     if (event.keyCode == 13) {
-    //         event.preventDefault();
-    //         return false;
-    //     }
-    // })
-
     //when form is submitted...
     $('form').on('submit', function (e) {
     //prevent default form behaviour
     e.preventDefault();
 
-    //get the values of selected radio buttons
+    //get the values of selected radio options
     let colorPref = $('input[name=color]:checked').val();
     let pricePref = $('input[name=price]:checked').val();
     let sugarPref = $('input[name=sugarLevel]:checked').val();
@@ -193,7 +194,7 @@ wineRecoApp.getWineReco = function() {
         });
     }
     
-    //get an array of wines that match the selected radio buttons
+    //get an array of wines that match the selected radio options
     const wineRecoList = wines.filter((value) => {
         return value.price < pricePref 
         && value.price > (pricePref - 10)

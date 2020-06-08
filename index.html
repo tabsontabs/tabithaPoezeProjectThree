@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <!-- where the user lands and sees instructions/gets information to use the app -->
     <header>
         <div class="subWrapper">
             <div class="headerFlex">
@@ -18,7 +19,9 @@
             </div>
         </div>
     </header>
+    <!-- where the user will select options within different fields to ultimately receive a wine recommendation catered to their preferences -->
     <form>
+        <!-- first question and options -->
         <fieldset id="q1" class="wineColor">
             <div class="wrapper">
                 <div class="wineColorForm">
@@ -37,6 +40,7 @@
                 </div>
             </div>
         </fieldset>
+        <!-- second question and options -->
         <fieldset id="q2" class="price">
             <div class="Wrapper">
                 <div class="priceForm">
@@ -51,6 +55,7 @@
                 </div>
             </div>
         </fieldset>
+        <!-- third question and options -->
         <fieldset id="q3" class="sugar">
             <div class="wrapper">
                 <div class="sugarForm">
@@ -65,6 +70,7 @@
                 </div>
             </div>
         </fieldset>
+        <!-- where the user is able to submit their preferences -->
         <section id="submit" class="submit">
             <div class="subwrapper">
                 <div class="submitFlex">
@@ -73,10 +79,12 @@
             </div>
         </section>
     </form>
+    <!-- where the user will see their results (in this case, a catered wine recommendation) -->
     <section id="results" class="results">
         <div class="subWrapper">
         </div>
     </section>
+    <!-- allows user to go back to question 1 so they can re-select options within fields as they wish -->
     <section id="tryAgain" class="tryAgain">
         <div class="buttonFlex">
             <button>Can I do that again?</button>
@@ -88,7 +96,9 @@
             <p>Made with 💖 by Tabitha Poeze</p>
         </div>
     </footer>
+    <!-- bringing in sweet alert  -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- bringing in jquery -->
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src='script.js'></script>
 </body>
