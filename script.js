@@ -21,7 +21,7 @@ const wines = [
             price: 12.95,
             sweet: 'false',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/010416.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
-            description: "Really great wine at a really great price point. "
+            description: "Really great wine at a really great price point. It has a unique, chocolate-forward palette that will surely impress even the finest sommeliers."
         },
         {
             title: 'Negrar Appassimento Veneto IGT',
@@ -29,7 +29,7 @@ const wines = [
             price: 14.95,
             sweet: 'true',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/629865.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
-            description: 'Cantina Valpolicella Negrar has been creating superb wines for 85 years. This red is made by drying grapes for a short period of time (appassimento) resulting in a smooth and rich wine. Full-bodied with aromas and flavours of plum, raisins, herbs, and cherry lingering on the finish. Serve with pizza.'
+            description: 'This wine is fruity and delicious and the description on the LCBO website literally says "Serve with pizza" so let\'\s just leave it at that.'
         },
         {
             title: 'Sogrape Gazela Vinho Verde',
@@ -53,7 +53,7 @@ const wines = [
             price: 17.95,
             sweet: 'false',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/426601.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
-            description: 'Pale straw colour; intense aromas of gooseberry, lime, grass and asparagus; dry, medium bodied, crisp acidity, and flavours of bell pepper, gooseberry citrus; clean, crisp finish.'
+            description: 'Super citrus-y and insanely refreshing. Like probably the closest thing to drinking water while still being 13% alcohol. This wine was made for picnics, patios, balconeys, or wherever else you can appropriately drink under some sunshine.'
         },
         {
             title: 'Mission Hill Five Vineyards Sauvignon Blanc',
@@ -61,7 +61,7 @@ const wines = [
             price: 9.95,
             sweet: 'false',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/145086.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
-            description: 'Clear pale straw colour with aromas of melon, gooseberry and grapefruit; dry with zingy acidity and flavours of tropical fruit followed by a mellow, slightly grassy finish.'
+            description: "Not your typical cheap white wine - lots of tropical flavors and no \"\ bready \"\ taste. The current owner of Mission Hill winery also founded Mike's Hard Lemonade, so you know this guy knows his way around a good drink."
         },
         {
             title: 'Lab Rosé Lisboa VR',
@@ -77,7 +77,7 @@ const wines = [
             price: 9.95,
             sweet: 'true',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/639971.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
-            description: "This rosé's fruit-forward character is consistent with Barefoot's fun and casual approach to wine and entertaining. Enjoy a drier style of rosé, with flavours of ripe raspberry, peach and crisp apple. Pair with appetizers, salads or your favourite light cuisine."
+            description: "This is for all you folks who really just want to drink Barefoot Pink Moscato (a.k.a. watermelon juice) but are no longer under the age of 20."
         },
         {
             title: 'Flat Rock Pink Twisted Rosé',
@@ -85,15 +85,15 @@ const wines = [
             price: 17.95,
             sweet: 'true',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/039974.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
-            description: "You can expect an elegant, stylish, artfully crafted wine with lifted rose petal, juicy red cherry, citrus and a savoury-edged finish. It's always right on the cusp of off-dry, which makes it a great wine for seafood or mildly spiced chicken kebabs."
+            description: "Strong red fruit flavors (think strawberries, cherries, raspberries) are well balanced with aromatic, floral flavors. If sweet and savory were a wine, this would be it."
         },
         {
-            title: 'La Vielle Ferme Rose Ventoux AOC',
+            title: 'La Vielle Ferme Rosé Ventoux AOC',
             color: 'rose',
             price: 12.45,
             sweet: 'false',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/622134.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
-            description: "Grapes grown on the slopes of France's Mont Ventoux ripen slowly at cooler temperatures, maintaining fruit flavours and crisp acidity. This wine is pale rose in colour, with delicate aromas of raspberry and strawberry. Dry and light-bodied, with citrus and raspberry fruit flavours. Serve chilled with tarragon chicken."
+            description: "This wine is quite tart with some very, very light strawberry notes. It's delicate and balanced. Also, rosé from France just feels right."
         }   
 ];
 
