@@ -160,8 +160,6 @@ wineRecoApp.getWineReco = function() {
         && value.color == colorPref
     });
 
-    console.log(wineReco);
-
     //loop through the array of wines and display a recommendation to the user
     wineReco.forEach(function (wine) {
         const userWineImg = $('.resultImg').attr('src', `${wine.url}`);
@@ -171,30 +169,6 @@ wineRecoApp.getWineReco = function() {
     });
 });
 }
-
-// wineRecoApp.displayWineReco = function (winesArray) {
-    
-// }
-
-    
-    // const wineSpecs = wines[colorPref];
- 
-
-    // for (let i = 0; i < wineSpecs.length; i++) {
-    //     const wineReco = wineSpecs[i];
-    //     //
-    //     if (wineReco.price < pricePref && wineReco.sweet == sugarPref) {
-    //         $('.resultImg').attr('src', `${wineReco.url}`);
-    //         $('.resultTitle').html(`${wineReco.title}`);
-    //         $('.resultInfo').html(`${wineReco.description}`);
-    //         $('.resultPrice').html(`$${wineReco.price}`);
-    //     }
-    // }
-// }
-// )}
-
-
-
 
 wineRecoApp.init = function() {
     wineRecoApp.autoScrolling();
