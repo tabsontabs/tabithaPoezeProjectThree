@@ -10,7 +10,8 @@ h1 {
 
 p {
     font-family: $paragraphFont;
-    @include font(1.5rem, 25px, 2px);
+    @include font(1.5rem, 30px, 3px);
+    font-weight: 500;
 }
 
 span {

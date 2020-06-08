@@ -28,6 +28,21 @@ button:focus, input[type=submit]:focus {
     border: 3px solid $buttonColor;
     background-color: $backgroundOne;
 }
+.tryAgain {
+
+    background-color: $backgroundThree;
+    padding-top: 5vh;
+
+    .buttonFlex {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+
+            button {
+                margin-bottom: 5vh;
+            }
+        }
+}
 
 @media (max-width: 450px) {
     button {

@@ -1,20 +1,10 @@
 .results {
     background-color: $backgroundThree;
-
-    .buttonFlex {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-    }
-        
-        button {
-            margin-bottom: 5vh;
-        }
 }
 
 .userWine {
     display: flex;
-    padding: 5vh 0vh 3vh 0vh;
+    padding: 5vh 0vh 0vh 0vh;
 
     .resultImg {
         height: 75vh;

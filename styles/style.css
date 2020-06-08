@@ -12,8 +12,9 @@ h1 {
 p {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
-  line-height: 25px;
-  letter-spacing: 2px;
+  line-height: 30px;
+  letter-spacing: 3px;
+  font-weight: 500;
 }
 
 span {
@@ -395,6 +396,25 @@ button:focus, input[type=submit]:focus {
   background-color: #121217;
 }
 
+.tryAgain {
+  background-color: #F6CACA;
+  padding-top: 5vh;
+}
+
+.tryAgain .buttonFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tryAgain .buttonFlex button {
+  margin-bottom: 5vh;
+}
+
 @media (max-width: 450px) {
   button {
     padding: 10px 20px;
@@ -578,25 +598,11 @@ button {
   background-color: #F6CACA;
 }
 
-.results .buttonFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.results button {
-  margin-bottom: 5vh;
-}
-
 .userWine {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 5vh 0vh 3vh 0vh;
+  padding: 5vh 0vh 0vh 0vh;
 }
 
 .userWine .resultImg {
