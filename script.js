@@ -70,8 +70,8 @@ const wines = [
             price: 9.95,
             sweet: 'false',
             url: 'https://www.lcbo.com/content/dam/lcbo/products/145086.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg',
-            description: "Not your typical cheap white wine - lots of tropical flavors and no \"\ bready\"\ taste. The current owner of Mission Hill winery also founded Mike's Hard Lemonade, so you know this guy knows his way around a good drink.",
-            alt: "A clear bottle with pale yellow wine and a black lid. The label features a large, black \"\ 5\"\ ."
+            description: 'Not your typical cheap white wine - lots of tropical flavors and no "bready" taste. The current owner of Mission Hill winery also founded Mike\'\s Hard Lemonade, so you know this guy knows his way around a good drink.',
+            alt: 'A clear bottle with pale yellow wine and a black lid. The label features a large, black "5".'
         },
         {
             title: 'Lab Rosé Lisboa VR',
