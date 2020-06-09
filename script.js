@@ -1,5 +1,5 @@
 
-// an array of different wines and their names, grape color, price (at the LCBO), sweetness, an image, and description
+// an array of different wines and their names, grape color, price (at the LCBO), sweetness, an image, alt tag for image, and description
 const wines = [
         {
             title: 'Toro Bravo Tempranillo Merlot',
